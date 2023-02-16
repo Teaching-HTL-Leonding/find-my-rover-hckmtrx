@@ -1,4 +1,4 @@
-﻿#region Main Program
+﻿#region input & calculation of distance
 int verticalDistance = 0, horizontalDistance = 0;
 string movements;
 bool isValid = true;
@@ -24,8 +24,9 @@ do
 
     if (!isValid) { Console.WriteLine("Try again..."); }
 } while (!isValid);
+#endregion
 
-
+#region output
 Console.Write("\nThe rover is ");
 if (horizontalDistance != 0)
 {
