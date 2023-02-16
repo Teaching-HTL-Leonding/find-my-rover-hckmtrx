@@ -30,16 +30,12 @@ do
 Console.Write("\nThe rover is ");
 if (horizontalDistance != 0)
 {
-    Console.Write(Math.Abs(horizontalDistance));
-    Console.Write("m to the ");
-    Console.Write(horizontalDistance > 0 ? "East" : "West");
+    Console.Write($"{Math.Abs(horizontalDistance)}m to the {(horizontalDistance > 0 ? "East" : "West")}");
 }
 if (verticalDistance != 0)
 {
     Console.Write(horizontalDistance == 0 ? " " : " and ");
-    Console.Write(Math.Abs(verticalDistance));
-    Console.Write("m to the ");
-    Console.Write(verticalDistance > 0 ? "North" : "South");
+    Console.Write($"{Math.Abs(verticalDistance)}m to the {(verticalDistance > 0 ? "North" : "South")}");
 }
 if (horizontalDistance == 0 && verticalDistance == 0) { Console.Write("in the base station"); }
 
