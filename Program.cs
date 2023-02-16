@@ -1,11 +1,4 @@
-﻿#region Constants
-const char NORTH = '^';
-const char SOUTH = 'V';
-const char EAST = '>';
-const char WEST = '<';
-#endregion
-
-#region Main Program
+﻿#region Main Program
 int verticalDistance = 0, horizontalDistance = 0;
 string movements;
 bool isValid = true;
@@ -18,10 +11,10 @@ do
     {
         switch (movements[i])
         {
-            case NORTH: verticalDistance++; break;
-            case SOUTH: verticalDistance--; break;
-            case EAST: horizontalDistance++; break;
-            case WEST: horizontalDistance--; break;
+            case '^': verticalDistance++; break;
+            case 'V': verticalDistance--; break;
+            case '>': horizontalDistance++; break;
+            case '<': horizontalDistance--; break;
             default:
                 if (Char.IsDigit(movements[i])) { SubstitueNumber(i); i--; }
                 else { isValid = false; }
